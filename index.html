@@ -1,139 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard UI</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
 
-  <div class="dashboard">
+        <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="responsive.css">
+        <title>Dashboard</title>
+    </head>
+    <body>
+         <button class="menu-btn" id="menuBtn"> 
+             <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="section">
 
-    <!-- Sidebar -->
+            <div class="lside" id="sidebar">
+                <div class="dashboard">
+                  <img src="https://cdn-icons-png.flaticon.com/128/17193/17193555.png">
+              
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="sec2">
+                    <div  onclick="showdata()"  class="dash2">
+                        <i class="fa-solid fa-gauge"></i>
+                        <h3>Dashboard</h3>
+                    </div>
+                    <div onclick class="user">
+                        <i class="fa-regular fa-user"></i>
+                        <a href="user.html">Users</a>
+                    </div>
+                    <div class="user">
+                        <i class="fa-brands fa-product-hunt"></i>
+                        <a href="product.html">Products</a>
+                    </div>
+                    <div class="user">
+                        <i class="fa-brands fa-jedi-order"></i>
+                        <a href="order.html">Orders</a>
+                    </div>
+                    <div class="user">
+                        <i class="fa-solid fa-message"></i>
+                        <h3>Message</h3>
+                    </div>
+                    <div class="user">
+                        <i class="fa-solid fa-gear"></i>
+                        <h3>Setting</h3>
+                    </div>
 
-    <div class="sidebar">
+                </div>
+                <div class="lgout">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    <h3>Logout</h3>
+                </div>
+            </div>
+            <div class="section2">
+                <header>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>search for everything...</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-regular fa-moon"></i>
+                        <i class="fa-regular fa-address-book"></i>
+                    </div>
 
-      <div>
-        <div class="logo">DashBoard</div>
+                </header>
+        
+                <div class="mid"  id="Dashboard">
+                    <div class="total">
+                        <h4>Total Users</h4>
+                        <span>2458</span>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <p>15.5%</p>
+                        </div>
 
-        <ul class="menu">
-          <li class="active">Dashboard</li>
-          <li>Users</li>
-          <li>Products</li>
-          <li>Orders</li>
-          <li>Messages</li>
-          <li>Settings</li>
-        </ul>
-      </div>
+                    </div>
+                    <div class="total">
+                        <h4>Total Order</h4>
+                        <span>1245</span>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <p>8.2%</p>
+                        </div>
 
-      <ul class="menu">
-        <li>Logout</li>
-      </ul>
+                    </div>
+                    <div class="total">
+                        <h4>Total Revenue</h4>
+                        <span>$48,920</span>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <p>15.6%</p>
+                        </div>
 
-    </div>
+                    </div>
+                    <div class="total">
+                        <h4>New Messages</h4>
+                        <span>328</span>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <p>5.1%</p>
+                        </div>
 
-    <!-- Main Section -->
+                    </div>
+                </div>
+                <div class="recent">
+                    <h3>Recent Orders</h3>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Order Id</th>
+                            <th>Customer</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                        <tr>
+                            <td>#1256</td>
+                            <td>John Doe</td>
+                            <td><span
+                                    class="status completed">Completed</span></td>
+                            <td>$120.00</td>
+                            <td> may 12, 2024</td>
+                        </tr>
+                        <tr>
+                            <td>#1255</td>
+                            <td>Jane Smith</td>
+                            <td><span
+                                    class="status processing">Processing</span></td>
+                            <td>$85.50</td>
+                            <td> may 12, 2024</td>
+                        </tr>
+                        <tr>
+                            <td>#1254</td>
+                            <td>Robert Brown</td>
+                            <td><span class="status shipped">Shipped</span></td>
+                            <td>$200.00</td>
+                            <td> may 11, 2024</td>
+                        </tr>
+                        <tr>
+                            <td>#1253</td>
+                            <td>Emily Davis</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>$75.00</td>
+                            <td>may 11, 2024</td>
+                        </tr>
 
-    <div class="main">
+                    </table>
+                </div>
 
-      <div class="topbar">
-
-        <div class="search-box">
-          <input type="text" placeholder="Search anything...">
+            </div>
         </div>
 
-        <div class="profile">
-          🌙 👤
-        </div>
+        <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
 
-      </div>
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+    });
 
-      <!-- Cards -->
 
-      <div class="cards">
 
-        <div class="card">
-          <h4>Total Users</h4>
-          <h2>2,458</h2>
-          <p class="growth">↑ 12.5%</p>
-        </div>
+function showdata() {
+   const data = document.getElementById("Dashboard");
+   data.style.display = "flex";
+}
 
-        <div class="card">
-          <h4>Total Orders</h4>
-          <h2>1,245</h2>
-          <p class="growth">↑ 8.2%</p>
-        </div>
-
-        <div class="card">
-          <h4>Total Revenue</h4>
-          <h2>$48,920</h2>
-          <p class="growth">↑ 15.6%</p>
-        </div>
-
-        <div class="card">
-          <h4>New Messages</h4>
-          <h2>328</h2>
-          <p class="growth">↑ 5.1%</p>
-        </div>
-
-      </div>
-
-      <!-- Table -->
-
-      <div class="table-box">
-
-        <h3>Recent Orders</h3>
-
-        <table>
-
-          <tr>
-            <th>Order ID</th>
-            <th>Customer</th>
-            <th>Status</th>
-            <th>Amount</th>
-            <th>Date</th>
-          </tr>
-
-          <tr>
-            <td>#1256</td>
-            <td>John Doe</td>
-            <td><span class="status completed">Completed</span></td>
-            <td>$120.00</td>
-            <td>May 12, 2024</td>
-          </tr>
-
-          <tr>
-            <td>#1255</td>
-            <td>Jane Smith</td>
-            <td><span class="status processing">Processing</span></td>
-            <td>$85.50</td>
-            <td>May 12, 2024</td>
-          </tr>
-
-          <tr>
-            <td>#1254</td>
-            <td>Robert Brown</td>
-            <td><span class="status shipped">Shipped</span></td>
-            <td>$200.00</td>
-            <td>May 11, 2024</td>
-          </tr>
-
-          <tr>
-            <td>#1253</td>
-            <td>Emily Davis</td>
-            <td><span class="status pending">Pending</span></td>
-            <td>$75.00</td>
-            <td>May 11, 2024</td>
-          </tr>
-
-        </table>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</body>
+</script>
+    </body>
 </html>
