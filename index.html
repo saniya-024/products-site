@@ -10,10 +10,10 @@
         <title>Dashboard</title>
     </head>
     <body>
-         <button class="menu-btn" id="menuBtn"> 
+         <button class="menu-btn" id="menu-btn"> 
              <i class="fa-solid fa-bars"></i>
         </button>
-        <div class="section">
+        <div class="section1">
 
             <div class="lside" id="sidebar">
                 <div class="dashboard">
@@ -26,17 +26,17 @@
                         <i class="fa-solid fa-gauge"></i>
                         <h3>Dashboard</h3>
                     </div>
-                    <div onclick class="user">
+                    <div  class="user">
                         <i class="fa-regular fa-user"></i>
-                        <a href="user.html">Users</a>
+                        <a href="">Users</a>
                     </div>
                     <div class="user">
                         <i class="fa-brands fa-product-hunt"></i>
-                        <a href="product.html">Products</a>
+                        <a href="">Products</a>
                     </div>
                     <div class="user">
                         <i class="fa-brands fa-jedi-order"></i>
-                        <a href="order.html">Orders</a>
+                        <a href="">Orders</a>
                     </div>
                     <div class="user">
                         <i class="fa-solid fa-message"></i>
@@ -48,7 +48,7 @@
                     </div>
 
                 </div>
-                <div class="lgout">
+                <div class="logout">
                     <i class="fa-solid fa-arrow-up-from-bracket"></i>
                     <h3>Logout</h3>
                 </div>
@@ -66,7 +66,7 @@
 
                 </header>
         
-                <div class="mid"  id="Dashboard">
+                <div class="mid"  id="Dashing">
                     <div class="total">
                         <h4>Total Users</h4>
                         <span>2458</span>
@@ -120,7 +120,7 @@
                             <td>#1256</td>
                             <td>John Doe</td>
                             <td><span
-                                    class="status completed">Completed</span></td>
+                                     class="status completed">Completed</span></td>
                             <td>$120.00</td>
                             <td> may 12, 2024</td>
                         </tr>
@@ -154,7 +154,7 @@
         </div>
 
         <script>
-    const menuBtn = document.getElementById("menuBtn");
+    const menuBtn = document.getElementById("menu-btn");
     const sidebar = document.getElementById("sidebar");
 
     menuBtn.addEventListener("click", () => {
@@ -164,7 +164,7 @@
 
 
 function showdata() {
-   const data = document.getElementById("Dashboard");
+   const data = document.getElementById("Dashing");
    data.style.display = "flex";
 }
 
